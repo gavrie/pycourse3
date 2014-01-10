@@ -77,6 +77,7 @@ Additional Language Features
   * Advanced use of functions
   * File input and output, console input
   * List comprehensions
+  * Scoping rules: Lexical scoping, closures, (optional: decorators)
 
 
 Day 3
