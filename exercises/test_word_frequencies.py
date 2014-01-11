@@ -6,7 +6,6 @@ Bonus items:
 
     1. Unicode support (try a Hebrew text file).
     2. Write unit tests! Even better, write them before you write the code.
-    3. Nicely handle declensions: 'chair' vs 'chairs' etc.
 """
 
 from word_frequencies import word_frequencies
@@ -25,3 +24,4 @@ def test_word_frequencies():
     }
 
     assert word_frequencies(text) == frequencies
+

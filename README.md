@@ -52,6 +52,7 @@ More Data Types
 Exercises
 
   * Exercise 2
+  * Exercise 3
 
 Day 2
 -----
