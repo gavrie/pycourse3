@@ -10,7 +10,7 @@ It should include the following classes:
 
 import pytest
 
-from addressbook.contact import Contact
+from addressbook.contact import Contact, Picture
 
 class TestContact(object):
 
@@ -22,6 +22,7 @@ class TestContact(object):
         moshe.email = "moshe.cohen@gmail.com"
         moshe.address = "12 Jabotinsky st., Tel Aviv, Israel"
         moshe.phone = "03-1234567"
+        moshe.picture = Picture("moshe.jpg")
 
     def test_contact_equality(self):
         contact1 = Contact(first="Moshe", last="Cohen")
@@ -43,3 +44,9 @@ class TestContact(object):
         moshe = Contact(first="Moshe", last="Cohen")
         assert repr(moshe) == "<Person 'Moshe Cohen'>"
 
+    def test_properties(self):
+        moshe = Contact(first="Moshe", last="Cohen")
+        moshe.email = "moshe.cohen@gmail.com"
+
+        assert moshe.full_name == "Moshe Cohen"
+        assert moshe.full_email == "Moshe Cohen <moshe.cohen@gmail.com>"
